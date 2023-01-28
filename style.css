@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     position: relative;
     background-color: #56A926;
-    height: 5000vh;
+    height: 20000vh;
     font-family: 'Chewy', cursive;
   }
   
@@ -72,6 +72,120 @@ body {
     animation-fill-mode: both;
 }
 
+.text3 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 50%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: 0%;
+    opacity: 100%;
+    text-align: center;
+    animation: text3 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.text4 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 50%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: 0%;
+    opacity: 100%;
+    text-align: center;
+    animation: text4 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.text5 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 70%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: 0%;
+    opacity: 100%;
+    text-align: center;
+    animation: text5 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.text6 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 70%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: -20%;
+    opacity: 100%;
+    text-align: center;
+    animation: text6 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.text7 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 70%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: 0%;
+    opacity: 100%;
+    text-align: center;
+    animation: text7 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.text8 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 70%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: 0%;
+    opacity: 100%;
+    text-align: center;
+    animation: text8 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
 #sentence1 {
     font-size: 120px;
 }
@@ -81,8 +195,11 @@ body {
         transform: translate(-50%, -50%);
         opacity: 100%;
     }
-    10% {
+    2% {
         transform: translate(-50%, 150%);
+        opacity: 0%;
+    }
+    100% {
         opacity: 0%;
     }
 }
@@ -91,11 +208,132 @@ body {
     0% {
         opacity: 0%;
     }
+    2% {
+        opacity: 0%;
+    }
+    5% {
+        opacity: 100%;
+        transform: translate(-50%, 50%) rotate(0deg) scale(1)
+    }
+    7% {
+        opacity: 0%;
+        transform: translate(50%, 50%) rotate(180deg) scale(0)
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text3 {
+    0%{
+        opacity: 0%;
+    }
+    7% {
+        opacity: 0%;
+    }
     10% {
+        opacity: 100%;
+    }
+    12% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text4 {
+    0%{
+        opacity: 0%;
+    }
+
+    12% {
         opacity: 0%;
     }
     15% {
         opacity: 100%;
+    }
+    17% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text5 {
+    0%{
+        opacity: 0%;
+    }
+
+    17% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 100%;
+    }
+    22% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text6 {
+    0%{
+        opacity: 0%;
+    }
+
+    22% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    27% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text7 {
+    0%{
+        opacity: 0%;
+    }
+
+    27% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 100%;
+    }
+    32% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text8 {
+    0%{
+        opacity: 0%;
+    }
+
+    32% {
+        opacity: 0%;
+    }
+    35% {
+        opacity: 100%;
+    }
+    37% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
     }
 }
 
@@ -125,16 +363,35 @@ body {
         transform: translate(-50%, -10%);
         width: 200%;
         height: 200%;
+        background-color: #97D96D;
     }
-    5% {
+    1% {
         transform: translate(-50%, -10%);
         width: 200%;
         height: 200%;
     }
-    10% {
+    2% {
         width: 200%;
         height: 100%;
         transform: translate(-50%,50%);
+    }
+    15% {
+        width: 200%;
+        height: 100%;
+        transform: translate(-50%,50%);
+        background-color: #97D96D;
+    }
+    17% {
+        transform: translate(-50%, -10%);
+        width: 200%;
+        height: 200%;
+        background-color: #8DC967;
+    }
+    100%{
+        transform: translate(-50%, -10%);
+        width: 200%;
+        height: 200%;
+        background-color: #8DC967;
     }
 }
 
@@ -201,7 +458,7 @@ body {
         transform: translate(-100%, 100%);
 
     }
-    10% {
+    2% {
         transform: translate(-100%, -100%);
     }
 }
@@ -224,17 +481,38 @@ body {
     0% {
         opacity: 100%;
         top: -5%;
+        left: 50%;
         transform: translate(-50%, 0%) scale(0)
     }
-    5% {
+    1% {
         opacity: 100%;
         top: -5%;
+        left: 50%;
         transform: translate(-50%, 0%) scale(0)
     }
-    10% {
+    2% {
         opacity: 100%;
         top: 50%;
+        left: 50%;
         transform: translate(-50%, 0%) scale(1)
+    }
+    15% {
+        opacity: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1)
+    }
+    17% {
+        opacity: 100%;
+        top: 32%;
+        left: 35.5%;
+        transform: translate(-50%, 0%) scale(0.4);
+    }
+    100% {
+        opacity: 100%;
+        top: 32%;
+        left: 35.5%;
+        transform: translate(-50%, 0%) scale(0.4);
     }
 }
 
@@ -257,19 +535,148 @@ body {
         top: -10%;
         transform: rotate(150deg);
     }
-    10% {
+    2% {
         left: 110%;
         top: -10%;
         transform: rotate(150deg);
     }
-    14% {
+    4% {
 
         top: 30%;
 
     }
-    15% {
+    5% {
         left: 50%;
         top: 50%;
         transform: rotate(-150deg);
     }
+    15% {
+        left: 50%;
+        top: 50%;
+        
+        transform: rotate(-150deg) scale(1);
+    }
+    17%{
+        top: 30%;
+        left: 35.5%;
+        transform: rotate(-150deg) scale(0.4);
+    }
+    100% {
+        top: 30%;
+        left: 35.5%;
+        transform: rotate(-150deg) scale(0.4);
+    }
 }
+
+/************************************************************/
+
+.stage2 {
+    position: fixed;
+    width: 100%;
+    transform-origin: 50% 50%;
+    transform: translate(30%, 40%) scale(2.5);
+    animation: stage2 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes stage2 {
+    0% {
+        opacity: 0%;
+    }
+
+    15% {
+        opacity: 0%;
+        transform: translate(30%, 40%) scale(2.5);
+    }
+    17% {
+        opacity: 100%;
+        transform: translate(0%, 0%) scale(1);
+    }
+    100% {
+        opacity: 100%;
+        transform: translate(0%, 0%) scale(1);
+    }
+}
+
+.machine {
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    transform-origin: 50% -100%;
+    transform: translate(-50%, -0%);
+    left: 60%;
+    bottom: 13%;
+    animation: machine 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes machine {
+    0% {
+        opacity: 0%;
+    }
+
+    17% {
+        opacity: 0%;
+    }
+    18% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.board {
+    position: fixed;
+    transform-origin: 100% 0%;
+    transform: translate(-100% 0%);
+    right: 18%;
+    top: 30%;
+    width: 30%;
+    height: 30%;
+    animation: board 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes board {
+    0% {
+        opacity: 0%;
+    }
+
+    32% {
+        opacity: 0%;
+    }
+    35% {
+        opacity: 100%;
+    }
+    37%{
+        width: 30%;
+        height: 30%;
+        right: 18%;
+        top: 30%;
+    }
+    40%{
+        width: 100%;
+        height: 100%;
+        right: 0%;
+        top: 0%;
+    }
+    100% {
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+        right: 0%;
+        top: 0%;
+    }
+}
+
+/************************************************************/
