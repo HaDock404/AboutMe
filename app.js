@@ -1,17 +1,19 @@
-window.onscroll = function() {myFunction()};
-     
-    function myFunction() {
-        var x = document.body.scrollTop || document.documentElement.scrollTop;
-            if (x > 150) {
-                document.getElementById("myP").className = "test1";
-            } else if (x > 100) {
-                document.getElementById("myP").className = "test2";
-            } else if (x > 50) {
-                document.getElementById("myP").className = "test3"; 
-            } else {
-            document.getElementById("myP").className = "";
-            }
-        var y = document.body.scrollLeft || document.documentElement.scrollLeft;
-        document.getElementById("mesures").innerHTML = "scrollLeft = " + y + "px scrollTop = " +  x + "px" ;
-            
+var offsetStart = 0;
+var offsetEnd = 0;
+
+const elypse1 = document.getElementById("elypse1")
+elypse1.style.left = ""+(screen.width / 2)+"px"
+
+
+
+window.addEventListener('scroll', () => {
+
+    var x = document.body.scrollTop || document.documentElement.scrollTop
+    console.log(x)
+
+    if (x > 500) {
+        //elypse1.classList.add("animate")
     }
+
+  document.documentElement.style.setProperty('--scroll', ( window.pageYOffset - offsetStart ) / ( document.body.offsetHeight - offsetStart - offsetEnd - window.innerHeight ));
+}, false);

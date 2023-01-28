@@ -2,14 +2,94 @@ html, body {
     overflow-x: hidden;
     position: relative;
     background-color: #56A926;
-    height:1500px; 
+    height:100000px;
+    font-family: 'Chewy', cursive;
+}
+
+.text{
+    font-size: 24px;
+    left: 50%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+#sentence1 {
+    font-size: 120px;
+    top: 50%;
+    opacity: 100%;
+}
+
+#sentence2 {
+    opacity: 0%;
 }
 
 #part1 {
     position: fixed;
     bottom: 0px;
+
 }
 
 #part2 {
     position: fixed;
 }
+
+#elypse1 {
+    width: 200%;
+    height: 200%;
+    border-radius: 100%;
+    background-color: #97D96D;
+    position: fixed;
+    transform: translate(-50%, -10%);
+    transform-origin: 0% 50%;
+    transition: transform 5s ease-in-out;
+}
+
+#elypse1.active {
+    width: 200%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #97D96D;
+    position: fixed;
+    transform: translate(-50%,50%);
+    transform-origin: 0% 50%;
+}
+
+#test1 {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
+
+:root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+
+  .progress {
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+  }
+  @keyframes progress {
+    0% {
+      background-color: #fff;
+      width: 0%;
+    }
+    100% {
+      background-color: rgb(20, 255, 226);
+      width: 100%;
+    }
+  }
