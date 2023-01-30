@@ -186,6 +186,25 @@ body {
     animation-fill-mode: both;
 }
 
+.text9 {
+    max-width: 50%;
+    margin: 0;
+    font-size: 70px;
+    left: 70%;
+    color: white;
+    position: fixed;
+    transform: translate(-50%, 50%);
+    transform-origin: 50% 50%;
+    top: 0%;
+    opacity: 100%;
+    text-align: center;
+    animation: text9 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
 #sentence1 {
     font-size: 120px;
 }
@@ -210,10 +229,11 @@ body {
     }
     2% {
         opacity: 0%;
+        transform: translate(-50%, 50%) rotate(0deg) scale(0);
     }
     5% {
         opacity: 100%;
-        transform: translate(-50%, 50%) rotate(0deg) scale(1)
+        transform: translate(-50%, 50%) rotate(0deg) scale(1);
     }
     7% {
         opacity: 0%;
@@ -331,6 +351,30 @@ body {
     }
     37% {
         opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes text9 {
+    0%{
+        opacity: 0%;
+    }
+
+    39% {
+        opacity: 0%;
+        transform: translate(-50%, 50%) scale(0);
+    }
+    42% {
+        opacity: 100%;
+        transform: translate(-50%, 50%) scale(1);
+        top: 0%;
+    }
+    43% {
+        opacity: 0%;
+        transform: translate(-50%, 50%) scale(10);
+        top: -500%;
     }
     100% {
         opacity: 0%;
@@ -508,6 +552,18 @@ body {
         left: 35.5%;
         transform: translate(-50%, 0%) scale(0.4);
     }
+    37% {
+        opacity: 100%;
+        top: 32%;
+        left: 35.5%;
+        transform: translate(-50%, 0%) scale(0.4);
+    }
+    40% {
+        opacity: 100%;
+        top: 32%;
+        left: -100%;
+        transform: translate(-50%, 0%) scale(1.2);
+    }
     100% {
         opacity: 100%;
         top: 32%;
@@ -561,6 +617,16 @@ body {
         left: 35.5%;
         transform: rotate(-150deg) scale(0.4);
     }
+    37% {
+        top: 30%;
+        left: 35.5%;
+        transform: rotate(-150deg) scale(0.4);
+    }
+    40% {
+        top: 30%;
+        left: -100%;
+        transform: rotate(-150deg) scale(1.2);
+    }
     100% {
         top: 30%;
         left: 35.5%;
@@ -595,6 +661,12 @@ body {
         opacity: 100%;
         transform: translate(0%, 0%) scale(1);
     }
+    37% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    40% {
+        transform: translate(-100%, 50%) scale(3);
+    }
     100% {
         opacity: 100%;
         transform: translate(0%, 0%) scale(1);
@@ -627,8 +699,22 @@ body {
     18% {
         opacity: 100%;
     }
+    37% {
+        width: 50%;
+        height: 50%;
+        left: 60%;
+        bottom: 13%;
+    }
+    40% {
+        width: 200%;
+        height: 200%;
+        left: 0%;
+        bottom: -120%;
+    }
     100% {
         opacity: 100%;
+        width: 200%;
+        height: 200%;
     }
 }
 
@@ -650,13 +736,16 @@ body {
 @keyframes board {
     0% {
         opacity: 0%;
+        right: -80%;
     }
 
     32% {
-        opacity: 0%;
+        opacity: 100%;
+        right: -80%;
     }
     35% {
         opacity: 100%;
+        right: 18%;
     }
     37%{
         width: 30%;
@@ -665,18 +754,167 @@ body {
         top: 30%;
     }
     40%{
-        width: 100%;
-        height: 100%;
-        right: 0%;
-        top: 0%;
+        width: 110%;
+        height: 110%;
+        right: -5%;
+        top: -5%;
+    }
+    42% {
+        width: 110%;
+        height: 110%;
+        right: -5%;
+        top: -5%;
+    }
+    43% {
+        width: 400%;
+        height: 400%;
+        right: -125%;
+        top: -265%;
     }
     100% {
-        opacity: 100%;
-        width: 100%;
-        height: 100%;
-        right: 0%;
-        top: 0%;
+        width: 400%;
+        height: 400%;
+        right: -125%;
+        top: -265%;
     }
 }
 
+.toolbox {
+    position: fixed;
+    width: 30%;
+    height: 30%;
+    transform-origin: 100% 100%;
+    transform: translate(-100% -100%);
+    bottom: 13%;
+    left: 15%;
+    animation: toolbox 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes toolbox {
+    0% {
+        opacity: 0%;
+        left: -80%;
+    }
+
+    32% {
+        opacity: 100%;
+        left: -80%;
+    }
+    35% {
+        opacity: 100%;
+        left: 15%;
+        bottom: 13%;
+    }
+    37%{
+        width: 30%;
+        height: 30%;
+        left: 15%;
+        bottom: 13%;
+    }
+    40%{
+        width: 150%;
+        height: 150%;
+        left: -200%;
+        bottom: -150%;
+    }
+    100% {
+        width: 150%;
+        height: 150%;
+        left: -200%;
+        bottom: -150%;
+    }
+}
+
+#name6 {
+    position: fixed;
+    transform: scale(1);
+    animation: name6 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+#name8 {
+    position: fixed;
+    transform: scale(1);
+    animation: name8 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes name6 {
+    0% {
+        transform: scale(0);
+        opacity: 0%;
+    }
+
+    40% {
+        transform: scale(10);
+        opacity: 0%;
+    }
+    42% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+
+}
+
+@keyframes name8 {
+    0% {
+        transform: scale(0);
+        opacity: 0%;
+    }
+
+    40.5% {
+        transform: scale(10);
+        opacity: 0%;
+    }
+    42% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+
+}
+
 /************************************************************/
+
+.pictureSVG {
+    position: fixed;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%) scale(1);
+    left: 50%;
+    top: 50%;
+    animation: pictureSVG 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes pictureSVG {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0%;
+    }
+
+    43% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0%;
+    }
+    45% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 100%;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 100%;
+    }
+
+}
