@@ -9,7 +9,7 @@ elypse1.style.left = ""+(screen.width / 2)+"px"
 window.addEventListener('scroll', () => {
 
     var x = document.body.scrollTop || document.documentElement.scrollTop
-    console.log(x)
+    console.log(x / screen.height)
 
     if (x > 500) {
         //elypse1.classList.add("animate")
