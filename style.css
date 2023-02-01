@@ -4,6 +4,20 @@ body {
     background-color: #56A926;
     height: 20000vh;
     font-family: 'Chewy', cursive;
+    animation: bg 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+
+  @keyframes bg {
+    0%, 68% {
+        background-color: #56A926;
+    }
+    69%, 100% {
+        background-color: #93C4FF;
+    }
   }
   
   .progress {
@@ -149,12 +163,10 @@ body {
 }
   
 @keyframes change {
-    0%, 2%, 5% {transform:translate3d(0,0,0);}
-    8%, 10% {transform:translate3d(0,-33.33%,0);}
-    13%,17% {transform:translate3d(0,-66.66%,0);}
-    22%,62.64% {transform:translate3d(0,-99.99%,0);}
-    66.64%,79.3% {transform:translate3d(0,-100%,0);}
-    83.3%,95.96% {transform:translate3d(0,-125%,0);}
+    0%, 2%, 5% {transform:translate3d(0,0,0);opacity: 100%;}
+    8%, 10% {transform:translate3d(0,-33.33%,0);opacity: 100%;}
+    13%,17% {transform:translate3d(0,-66.66%,0);opacity: 100%;}
+    17%, 100% {opacity: 0%;}
 }
 
 /************************************************************/
@@ -281,6 +293,7 @@ body {
     32%, 35% {transform:translate3d(0,-60%,0);}
     37%, 42% {transform:translate3d(0,-78%,0);}
     43%, 100% {transform:translate3d(0,-100%,0);}
+    
 }
 
 /************************************************************/
@@ -525,12 +538,13 @@ body {
     0%, 57% {transform:translate3d(100%,0,0);}
     59% {transform:translate3d(100%,0,0);}
     59%, 60% {transform:translate3d(0,0,0);}
-    62%, 64% {transform:translate3d(0,-16.66%,0);}
-    66%, 68% {transform:translate3d(0,-33.33%,0);}
-    70%, 72% {transform:translate3d(0,-49.99%,0);}
+    60%, 64% {transform:translate3d(0,-16.66%,0);}
+    64%, 68% {transform:translate3d(0,-33.33%,0);}
+    68%, 74% {transform:translate3d(0,-49.99%,0);}
     74%, 76% {transform:translate3d(0,-66.59%,0);}
-    78%, 80% {transform:translate3d(0,-83.25%,0);}
-    82%, 84% {transform:translate3d(0,-100%,0);}
+    76%, 80% {transform:translate3d(0,-83.25%,0);}
+    80%, 84% {transform:translate3d(0,-100%,0); opacity: 100%;}
+    84%, 100% {opacity: 0%;}
 }
 
 /************************************************************/
@@ -910,34 +924,47 @@ body {
         width: 200%;
         height: 200%;
         background-color: #97D96D;
+        opacity: 100%;
     }
     1% {
         transform: translate(-50%, -10%);
         width: 200%;
         height: 200%;
+        opacity: 100%;
+        opacity: 100%;
     }
     2% {
         width: 200%;
         height: 100%;
         transform: translate(-50%,50%);
+        opacity: 100%;
     }
     15% {
         width: 200%;
         height: 100%;
         transform: translate(-50%,50%);
         background-color: #97D96D;
+        opacity: 100%;
     }
     17% {
         transform: translate(-50%, -10%);
         width: 200%;
         height: 200%;
         background-color: #8DC967;
+        opacity: 100%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    71% {
+        opacity: 0%;
     }
     100%{
         transform: translate(-50%, -10%);
         width: 200%;
         height: 200%;
         background-color: #8DC967;
+        opacity: 0%;
     }
 }
 
@@ -1002,10 +1029,21 @@ body {
 @keyframes tree {
     0% {
         transform: translate(-100%, 100%);
+        opacity: 100%;
 
     }
     2% {
         transform: translate(-100%, -100%);
+        opacity: 100%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    71% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
     }
 }
 
@@ -1066,8 +1104,14 @@ body {
         left: -100%;
         transform: translate(-50%, 0%) scale(1.2);
     }
-    100% {
+    70% {
         opacity: 100%;
+    }
+    71% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
         top: 32%;
         left: 35.5%;
         transform: translate(-50%, 0%) scale(0.4);
@@ -1092,47 +1136,62 @@ body {
         left: 110%;
         top: -10%;
         transform: rotate(150deg);
+        opacity: 100%;
     }
     2% {
         left: 110%;
         top: -10%;
         transform: rotate(150deg);
+        opacity: 100%;
     }
     4% {
 
         top: 30%;
+        opacity: 100%;
 
     }
     5% {
         left: 50%;
         top: 50%;
         transform: rotate(-150deg);
+        opacity: 100%;
     }
     15% {
         left: 50%;
         top: 50%;
         
         transform: rotate(-150deg) scale(1);
+        opacity: 100%;
     }
     17%{
         top: 30%;
         left: 35.5%;
         transform: rotate(-150deg) scale(0.4);
+        opacity: 100%;
     }
     37% {
         top: 30%;
         left: 35.5%;
         transform: rotate(-150deg) scale(0.4);
+        opacity: 100%;
     }
     40% {
         top: 30%;
         left: -100%;
         transform: rotate(-150deg) scale(1.2);
+        opacity: 100%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    71% {
+        opacity: 0%;
     }
     100% {
         top: 30%;
         left: 35.5%;
         transform: rotate(-150deg) scale(0.4);
+        opacity: 0%;
     }
 }
 
@@ -1165,12 +1224,20 @@ body {
     }
     37% {
         transform: translate(0%, 0%) scale(1);
+        opacity: 100%;
     }
     40% {
         transform: translate(-100%, 50%) scale(3);
+        opacity: 100%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    71% {
+        opacity: 0%;
     }
     100% {
-        opacity: 100%;
+        opacity: 0%;
         transform: translate(0%, 0%) scale(1);
     }
 }
@@ -1277,12 +1344,24 @@ body {
         height: 400%;
         right: -125%;
         top: -265%;
+        opacity: 100%;
+    }
+    74.5% {
+        width: 400%;
+        height: 400%;
+        right: -125%;
+        top: -265%;
+        opacity: 100%;
+    }
+    75% {
+        opacity: 0%;
     }
     100% {
         width: 400%;
         height: 400%;
         right: -125%;
         top: -265%;
+        opacity: 0%;
     }
 }
 
@@ -1404,7 +1483,7 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
-
+/*
 @keyframes pictureSVG {
     0% {
         transform: translate(-50%, -50%) scale(0);
@@ -1419,9 +1498,179 @@ body {
         transform: translate(-50%, -50%) scale(1);
         opacity: 100%;
     }
-    100% {
+    75% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 100%;
     }
+    83% {
+        transform: translate(-59.5%, -725%) scale(40);
+        opacity: 100%;
+    }
+    100% {
+        transform: translate(-59.5%, -725%) scale(40);
+        opacity: 100%;
+    }
+}
+*/
 
+@keyframes pictureSVG {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    43% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    45% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    75% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    77% {
+        transform: translate(-50%, -70%) scale(1);
+        opacity: 0%;
+        width: 300%;
+        height: 300%;
+    }
+    100% {
+        transform: translate(-50%, -70%) scale(1);
+        opacity: 0%;
+        width: 300%;
+        height: 300%;
+    }
+}
+
+/************************************************************/
+
+#bg4x {
+    animation: rectangle246 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    fill: #80A9F9;
+
+}
+
+@keyframes rectangle246 {
+    0%, 59%, 62% {fill: #80A9F9;}
+    62%, 63%, 100% {fill: #08245c;}
+
+}
+
+#filtrenuit {
+    animation: filtrenuit 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    fill: #80a8f900;
+}
+
+@keyframes filtrenuit {
+    0%, 59%, 62% {fill: #80a8f900;}
+    62%, 63%, 100% {fill: #08245c9c;}
+}
+
+#Rectangle_248 {
+    animation: rectangle248 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+}
+
+#Rectangle_249 {
+    animation: rectangle248 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes rectangle248 {
+    0%, 59%, 62% {opacity: 100%;}
+    62%, 63%, 100% {opacity: 0%;}
+}
+
+.effetlumineuxx {
+    animation: effetlumineux 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    opacity: 0%;
+
+}
+
+.vitrelumiere {
+    animation: effetlumineux 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    fill: #FBFF41;
+    opacity: 100%;
+}
+
+#fenetre1 {
+    animation: fenetre 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes effetlumineux {
+    0%, 62% {opacity: 0%;}
+    63%, 100% {opacity: 100%;}
+}
+
+@keyframes fenetre {
+    0%, 65% {fill: #CEEBED;}
+    66%, 67%, 100% {fill: #FBFF41;}
+}
+
+/************************************************************/
+
+.flat {
+    position: fixed;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    animation: flat 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes flat {
+    0%, 69% {
+        opacity: 0%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    76.6% {
+        opacity: 0%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    78% {
+        opacity: 100%;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
