@@ -1257,6 +1257,179 @@ body {
     animation-fill-mode: both;
 }
 
+#screenMachine3 {
+    opacity: 100%;
+    animation: screenMachine3 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes screenMachine3 {
+    0%, 28% {
+        opacity: 0;
+    }
+    28.1% {
+        opacity: 100%;
+    }
+}
+
+#screenMachine2 {
+    opacity: 100%;
+    animation: screenMachine2 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes screenMachine2 {
+    0%, 25% {
+        opacity: 0;
+    }
+    25.1% {
+        opacity: 100%;
+    }
+}
+
+#box1 {
+    transform: translate(60%);
+    animation: box1 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes box1 {
+    0%, 25% {
+        transform: translate(0%);
+    }
+    27.5%, 100% {
+        transform: translate(60%);
+    }
+}
+
+#box2 {
+    transform: translate(40%);
+    animation: box2 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes box2 {
+    0%, 26.5% {
+        transform: translate(0%);
+    }
+    27.5%, 100% {
+        transform: translate(40%);
+    }
+}
+
+#box3 {
+    transform: translate(20%);
+    animation: box3 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes box3 {
+    0%, 28% {
+        transform: translate(0%);
+    }
+    30%, 100% {
+        transform: translate(20%);
+    }
+}
+
+#screenMachine1 {
+    opacity: 100%;
+    animation: screenMachine1 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes screenMachine1 {
+    0%, 21% {
+        opacity: 0;
+    }
+    21.1% {
+        opacity: 100%;
+    }
+}
+
+#Hello {
+    opacity: 100%;
+    animation: hello 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    
+}
+
+@keyframes hello {
+    0%, 18% {
+        opacity: 0%;
+    }
+    18.1%, 20% {
+        opacity: 100%;
+    }
+}
+
+#boutonOn {
+    opacity: 0%;
+    animation: boutonOn 0.3s linear 1s infinite alternate;
+}
+
+@keyframes boutonOn {
+    0%, 49.99% {
+        opacity: 0%;
+    }
+    50%, 100% {
+        opacity: 100%;
+    }
+}
+
+#alerte {
+    opacity: 0%;
+    animation: alerte 0.3s linear 1s infinite alternate;
+}
+
+.alerte {
+    opacity: 100%;
+    animation: alertedisplay 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes alerte {
+    0%, 49.99% {
+        opacity: 0%;
+    }
+    50%, 100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes alertedisplay {
+    0%, 28% {
+        opacity: 0%;
+    }
+    28.1% {
+        opacity: 100%;
+    }
+}
+
 @keyframes machine {
     0% {
         opacity: 0%;
@@ -1665,9 +1838,9 @@ body {
         opacity: 0%;
         transform: translate(-50%, -50%) scale(0);
     }
-    76.6% {
+    76% {
         opacity: 0%;
-        transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -37%) scale(0);
     }
     78% {
         opacity: 100%;
